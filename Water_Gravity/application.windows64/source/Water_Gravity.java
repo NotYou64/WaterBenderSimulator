@@ -3,6 +3,8 @@ import processing.data.*;
 import processing.event.*; 
 import processing.opengl.*; 
 
+import static javax.swing.JOptionPane.*; 
+
 import java.util.HashMap; 
 import java.util.ArrayList; 
 import java.io.File; 
@@ -18,19 +20,26 @@ public class Water_Gravity extends PApplet {
 // Water Bender Simulator
 // 4-27-20
 
-// Globals
+// imports
+
+
+// globals
 Mover[] m;
 PVector center;
+int partCount;
 
 // setup function
 public void setup() {
+  
+  // prompt the user for number of particles
+  partCount = PApplet.parseInt(showInputDialog("Enter the number of particles (Recommended: >1500)"));
   
   // set up screen
   
   
   
   // create water particle objects
-  m = new Mover[1750];
+  m = new Mover[partCount];
   for (int i = 0; i < m.length; i++) {
     m[i] = new Mover(random(width)*10-width*5, random(width)*10-width*5);
   }

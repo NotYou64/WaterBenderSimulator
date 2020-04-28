@@ -32,7 +32,7 @@ int partCount;
 public void setup() {
   
   // prompt the user for number of particles
-  partCount = PApplet.parseInt(showInputDialog("Enter the number of particles (Recommended: >1500)"));
+  partCount = PApplet.parseInt(showInputDialog("Enter the number of particles (Recommended: 500<x<1000)"));
   
   // set up screen
   
